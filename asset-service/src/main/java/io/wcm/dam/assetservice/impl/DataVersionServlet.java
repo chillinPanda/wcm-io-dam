@@ -67,6 +67,7 @@ class DataVersionServlet extends SlingSafeMethodsServlet {
 
       response.setContentType(ContentType.JSON);
       response.setCharacterEncoding(CharEncoding.UTF_8);
+      response.setHeader("Dispatcher", "no-cache");
       response.getWriter().write(jsonResponse.toString());
     }
     catch (JSONException ex) {
